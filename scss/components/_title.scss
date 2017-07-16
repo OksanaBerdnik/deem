@@ -47,3 +47,18 @@
     color: white;
   }
 }
+
+@media all and (min-width: 560px) and (max-width: 767px) {
+  .main-heading {
+    font-size: 4rem;
+  }
+}
+
+@media all and (max-width: 559px) {
+  .main-heading {
+    font-size: 3rem;
+    span {
+      font-size: 1.4rem;
+    }
+  }
+}

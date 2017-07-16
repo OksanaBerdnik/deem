@@ -4,7 +4,7 @@
   min-width: 100%;
   left: 0;
   background: none;
-  z-index: 1;
+  z-index: 2;
 }
 
 header {
@@ -31,12 +31,11 @@ header {
 }
 
 .phones {
-  margin: 0 0 0 25px;
   a {
     display: block;
     font-weight: 300;
     font-size: 1.8rem;
-    margin-bottom: 10px;
+    margin: 0 0 10px 25px;
 
     &:last-child {
       margin-bottom: 0;
@@ -152,5 +151,105 @@ header {
     align-items: center;
     fill: white;
     background: $main-color;
+  }
+}
+
+.mobile-menu {
+  display: none;
+  background: #ebebeb;
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  color: #000;
+  font-weight: 700;
+  z-index: 3;
+  text-align: center;
+  font-size: 2rem;
+  padding: 5rem 0;
+  text-transform: uppercase;
+
+  a {
+    padding: 5px;
+    display: block;
+  }
+}
+
+.burger {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 20px;
+  display: none;
+  z-index: 4;
+
+  span {
+    width: 25px;
+    height: 2px;
+    margin-bottom: 5px;
+    display: block;
+    background-color: $main-color;
+    transition: .3s all;
+
+    &:last-child {
+      margin: 0;
+    }
+  }
+}
+
+.open-menu {
+  &.burger {
+    span {
+      transition: .3s all;
+      position: relative;
+
+      &:first-child {
+        transform: rotate(45deg);
+        top: 4px;
+      }
+      &:nth-child(2) {
+        transform: rotate(-45deg);
+        top: -3px;
+      }
+      &:last-child {
+        display: none;
+      }
+    }
+  }
+
+  &.mobile-menu {
+    display: block;
+  }
+}
+
+@media all and (max-width: 767px) {
+  .language {
+    display: none;
+  }
+}
+
+@media all and (min-width: 768px) and (max-width: 991px) {
+  .menu {
+    a {
+      margin-left: 10px;
+    }
+  }
+}
+
+@media all and (max-width: 559px) {
+  .header {
+    justify-content: center;
+  }
+
+  .logo {
+    width: 100%;
+  }
+
+  .phones, nav {
+    display: none;
+  }
+
+  .burger {
+    display: block;
   }
 }

@@ -20,6 +20,7 @@ input, textarea, select {
 
 input[type=submit], button {
   background: transparent;
+  border: none;
 }
 
 .form-field {
@@ -32,6 +33,11 @@ input[type=submit], button {
     font-size: 14px;
     font-weight: 400;
     border: 2px solid rgba(0, 0, 0, 0.3);
+    transition: .2s all;
+
+    &:focus, &:hover {
+      border-color: $main-color;
+    }
 
     &:focus::-webkit-input-placeholder {
        color: transparent;

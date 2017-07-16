@@ -1,0 +1,168 @@
+.portfolio {
+  height: 100%;
+
+  .slick-slide {
+    width: 50vw;
+    overflow: hidden;
+    position: relative;
+    transition: .4s all;
+
+    .btn {
+      position: absolute;
+      z-index: 1;
+      bottom: 30px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: none;
+    }
+
+    &:not(.slick-center) {
+      filter: grayscale(1);
+    }
+
+    &:after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      display: block;
+      top: 0;
+      left: 0;
+    }
+  }
+
+  .slick-center.slick-current {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
+
+    &:after {
+      content: none;
+    }
+
+    .btn {
+      display: block;
+    }
+
+    &:hover {
+      &:after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.8);
+        display: block;
+        top: 0;
+        left: 0;
+      }
+
+      .see-more {
+        display: block;
+        position: relative;
+        z-index: 1;
+      }
+
+      .btn {
+        display: none;
+      }
+
+      img {
+        filter: grayscale(1);
+      }
+    }
+  }
+
+  .slick-list, .slick-track {
+    height: 100%;
+  }
+
+  img {
+    min-width: 100%;
+    min-height: 100%;
+    max-width: inherit;
+  }
+}
+
+.arrows {
+  position: absolute;
+  z-index: 10;
+  top: 50%;
+  transform: translateY(-50%);
+  color: white;
+  text-transform: uppercase;
+  font-size: 2rem;
+
+  .line-after, .line-before {
+    &:after, &:before {
+      background: white;
+    }
+  }
+
+  svg {
+    fill: white;
+  }
+}
+
+.nextArrow {
+  right: 8%;
+
+  svg {
+    transform: rotate(180deg);
+  }
+}
+
+.prevArrow {
+  left: 8%;
+}
+
+.see-more {
+  display: none;
+  color: white;
+  text-align: center;
+
+  span {
+    text-transform: uppercase;
+    display: block;
+    margin-top: 3rem;
+  }
+
+  svg {
+    fill: white;
+  }
+
+  a {
+    &:before,&:after {
+      background: white;
+    }
+  }
+}
+
+@media all and (max-width: 767px) {
+  .arrows {
+    .line-after, .line-before {
+      &:after, &:before {
+        content: none;
+      }
+    }
+  }
+}
+
+@media all and (max-width: 559px) {
+  .arrows {
+    font-size: 0;
+  }
+
+  .portfolio .slick-slide {
+    width: 70vw;
+  }
+
+  .prevArrow {
+    left: 4%;
+  }
+
+  .nextArrow {
+    right: 4%;
+  }
+}

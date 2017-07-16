@@ -13,12 +13,19 @@
 }
 
 .socials {
+
   svg {
     fill: white;
+    transition: .2s all;
   }
 
   li {
     margin: 0 10px;
+    &:hover, &:focus {
+      svg {
+        fill: $main-color;
+      }
+    }
   }
 }
 
@@ -29,4 +36,28 @@
   left: 0;
   background: none;
   z-index: 1;
+}
+
+@media all and (max-width: 559px) {
+  .footer {
+    padding: 10px 0 5px;
+
+    .container {
+      flex-flow: row wrap;
+    }
+
+    .emotion {
+      display: block;
+      margin: 5px auto;
+    }
+
+    p, .socials {
+      width: 100%;
+      text-align: center;
+    }
+
+    p {
+      margin-bottom: 10px;
+    }
+  }
 }

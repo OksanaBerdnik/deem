@@ -2,9 +2,15 @@
   min-height: calc(100% - 225px);
 }
 
+.static-page {
+  height: calc(100% - 225px);
+}
+
 .homepage {
   background: url('/img/homepage_bg.jpg') 50% no-repeat;
   background-size: cover;
+  background-color: #FFF;
+  background-blend-mode: luminosity, normal;
 }
 
 .overlay {
@@ -19,5 +25,31 @@
       line-height: 1.5;
       opacity: 0.8;
     }
+  }
+}
+
+@media all and (min-width: 600px) and (max-width: 991px) {
+  .main-page {
+    min-height: calc(100% - 221px);
+  }
+
+  .static-page {
+    height: calc(100% - 221px);
+  }
+}
+
+@media all and (max-width: 991px) {
+  .overlay .description {
+    padding: 20px 0;
+  }
+}
+
+@media all and (max-width: 599px) {
+  .main-page {
+    min-height: calc(100% - 216px);
+  }
+
+  .static-page {
+    height: calc(100% - 216px);
   }
 }
