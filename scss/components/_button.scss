@@ -1,0 +1,40 @@
+.btn {
+  font-weight: 700;
+  text-transform: uppercase;
+  transition: .2s all;
+  padding: 20px 5.5rem;
+  font-size: 12px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.btn-active {
+  border: 2px solid $main-color;
+  background-color: rgba(8, 8, 8, 0.8);
+  color: $main-color;
+
+  &:hover, &:focus {
+    background-color: rgba(8, 8, 8, 1);
+  }
+}
+
+.disable {
+  color: rgba(255, 255, 255, 0.3);
+
+  &:hover, &:focus {
+    color: white;
+  }
+}
+
+.submit {
+  padding: 10px;
+  border: 2px solid $main-color;
+  color: $main-color;
+  cursor: pointer;
+  transition: .2s all;
+
+  &:hover, &:focus {
+    background-color: $main-color;
+    color: white;
+  }
+}

@@ -88,15 +88,14 @@ $(function() {
             $(e).find(".paginator-block span").text(parseInt(d) - 1)
         }
     });
-    $("#style-switcher").click(function() {
-        if (!$(".color-switcher").hasClass("active")) {
-            $(".color-switcher").fadeIn("fast");
-            $(".color-switcher").addClass("active")
-        } else {
-            $(".color-switcher").fadeOut("fast");
-            $(".color-switcher").removeClass("active")
-        }
+    $("#style-switcher").on('click', function(e) {
+        e.preventDefault();
+        $(".color-switcher").fadeToggle();
     });
+    $("#style-switcher").on('blur', function(e) {
+        $(".color-switcher").fadeToggle();
+    });
+
     $(".pagination a span").parent().css({
         background: "transparent"
     })
@@ -106,5 +105,16 @@ function scrollToItem(a) {
         scrollTop: $(a).offset().top
     }, 1000);
     return false
+};
+
+function myMap() {
+    var mapCanvas = document.getElementById("googleMap");
+    var myCenter = new google.maps.LatLng(49.448399, 32.057533);
+    var mapOptions = {center: myCenter, zoom: 18};
+    var map = new google.maps.Map(mapCanvas,mapOptions);
+    var marker = new google.maps.Marker({
+        position: myCenter,
+        icon: "/img/pointer.png"
+    });
+    marker.setMap(map);
 }
-;

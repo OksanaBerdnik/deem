@@ -1,0 +1,46 @@
+.container {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+  padding: 10px;
+}
+
+.half-block {
+  padding: 4rem;
+  max-width: 540px;
+}
+
+.xs25 {
+  width: 25%;
+}
+.xs33 {
+  width: 33.333%;
+}
+.xs40 {
+  width: 40%;
+}
+.xs48 {
+  width: 48%;
+}
+.xs50 {
+  width: 50%;
+}
+.xs75 {
+  width: 75%;
+}
+
+@media all and (min-width: 768px) {
+  .sm48 {
+    width: 48%;
+  }
+}
+
+@media all and (min-width: 992px) {
+  .md24 {
+    width: 24%;
+  }
+  .md50 {
+     width: 50%;
+  }
+}

@@ -1,0 +1,42 @@
+.absolute-height {
+  min-height: 100%;
+}
+
+.designPage {
+  background: url('/img/design_bg.jpg') 50% no-repeat;
+  background-size: cover;
+  align-items: stretch;
+}
+
+.aside {
+  background: url('/img/go_to_main.jpg') 50% no-repeat;
+  background-size: cover;
+  max-width: 380px;
+
+  .aside-rotate-block {
+    flex-direction: column-reverse;
+    transform: rotate(90deg);
+    text-align: center;
+  }
+
+  .middle-title {
+    color: white;
+    font-weight: 400;
+
+    &:before, &:after {
+      background: white;
+    }
+  }
+
+  .prev {
+    width: 5rem;
+    height: 5rem;
+    border: 1px solid white;
+    transform: rotate(-90deg);
+    margin: 25% auto 0;
+
+    svg {
+      fill: white;
+    }
+  }
+}

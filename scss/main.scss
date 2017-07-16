@@ -1937,10 +1937,16 @@
 //}
 //
 
+@import 'layout/_reset';
+@import "layout/_grid";
+@import 'layout/_default';
 
-@import 'default';
-
-@import 'header';
-@import 'footer';
+@import "components/_title";
+@import "components/_button";
+@import "components/_form_elements";
+@import 'components/_header';
+@import 'components/_footer';
 
 @import 'pages/homepage';
+@import 'pages/design';
+@import 'pages/item';

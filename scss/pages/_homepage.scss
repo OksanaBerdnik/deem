@@ -1,3 +1,23 @@
+.main-page {
+  min-height: calc(100% - 225px);
+}
+
 .homepage {
-  height: calc(100% - 150px);
+  background: url('/img/homepage_bg.jpg') 50% no-repeat;
+  background-size: cover;
+}
+
+.overlay {
+  .description {
+    width: 85%;
+    max-width: 550px;
+    align-self: center;
+    padding: 40px 0;
+
+    p {
+      margin-bottom: 15px;
+      line-height: 1.5;
+      opacity: 0.8;
+    }
+  }
 }
